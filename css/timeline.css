@@ -1,0 +1,131 @@
+.panel-tools {
+    float: right;
+}
+
+.timeline {
+position:relative;
+list-style:none;
+margin:0 0 30px;
+padding:0;
+}
+
+.timeline:before {
+content:'';
+position:absolute;
+top:0;
+bottom:0;
+width:4px;
+background:#ddd;
+left:13px;
+border-radius:2px;
+margin:0;
+}
+
+.timeline-body img {
+margin-right:3px;
+margin-bottom:3px;
+}
+
+.timeline>li {
+position:relative;
+margin-right:0;
+margin-bottom:10px;
+}
+
+.timeline>li .timeline-item {
+-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.1);
+box-shadow:0 1px 1px rgba(0,0,0,0.1);
+border:1px solid #eee;
+border-radius:3px;
+margin-top:0;
+background:#fff;
+color:#444;
+margin-left:40px;
+margin-right:5px;
+position:relative;
+padding:0;
+}
+
+.timeline>li .timeline-item>.timeline-header {
+color:#555;
+background:#f8f8f8;
+border-bottom:1px solid #f4f4f4;
+font-size:11px;
+line-height:1.1;
+font-weight:300;
+margin:0;
+padding:5px;
+}
+
+.timeline>li .timeline-item>.timeline-header>a {
+font-weight:500;
+font-size:13px;
+display:block;
+}
+
+.timeline>li .timeline-item>.timeline-header>.timeline-user {
+display:inline-block;
+padding-top:7px;
+}
+
+.timeline>li .timeline-item>.timeline-header>.time {
+color:#999;
+float:right;
+font-size:11px;
+padding-top:5px;
+}
+
+.timeline>li .timeline-item>.timeline-header>.time .fa,.timeline>li .timeline-item>.timeline-header>.time .far {
+font-size:13px;
+margin-right:5px;
+margin-left:5px;
+}
+
+.timeline>li .timeline-item .timeline-footer .btn {
+margin-right:3px;
+}
+
+.timeline>li>.fa,.timeline>li>.far,.timeline>li>.glyphicon,.timeline>li>.ion {
+width:30px;
+height:30px;
+font-size:15px;
+line-height:30px;
+position:absolute;
+color:#666;
+background:#d2d6de;
+border-radius:50%;
+text-align:center;
+left:0;
+top:0;
+}
+
+.timeline>.time-label>span {
+font-weight:600;
+display:inline-block;
+border-radius:4px;
+padding:5px;
+}
+
+.timeline-inverse>li>.timeline-item {
+background:#f0f0f0;
+border:1px solid #ddd;
+-webkit-box-shadow:none;
+box-shadow:none;
+}
+
+.timeline-inverse>li>.timeline-item>.timeline-header {
+border-bottom-color:#ddd;
+}
+
+.mce-content-body th,.mce-content-body td,.timeline>li .timeline-item>.timeline-body,.timeline>li .timeline-item>.timeline-footer,.timeline>li .timeline-item .timeline-footer {
+padding:5px;
+}
+
+.timeline>li:before,.timeline>li:after,.direct-chat-msg:before,.direct-chat-msg:after {
+content:" ";
+display:table;
+}
+
+.timeline>li:after,.direct-chat-msg:after {
+clear:both;
+}

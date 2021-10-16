@@ -1,0 +1,1 @@
+{"result":{"text":"a to the power of italic 3 italic. italic space b to the power of italic minus italic 1 end exponent"},"status":"ok"}

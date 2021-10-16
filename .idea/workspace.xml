@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4034bdf0-94cc-48d1-8e67-483e750054e4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ProjectId" id="1t3PbtXrat7StSRjnDxvUYFkKr8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/controllers" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\www\spycloud3\application\controllers" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4034bdf0-94cc-48d1-8e67-483e750054e4" name="Default Changelist" comment="" />
+      <created>1621994873807</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621994873807</updated>
+      <workItem from="1621994875207" duration="3648000" />
+      <workItem from="1622200874197" duration="55000" />
+      <workItem from="1622217956997" duration="2437000" />
+      <workItem from="1622423393887" duration="605000" />
+      <workItem from="1622909414368" duration="1117000" />
+      <workItem from="1622970274477" duration="5992000" />
+      <workItem from="1622987543646" duration="2153000" />
+      <workItem from="1623049526388" duration="501000" />
+      <workItem from="1623080315107" duration="2920000" />
+      <workItem from="1623147255171" duration="3538000" />
+      <workItem from="1623158985478" duration="152000" />
+      <workItem from="1623235300742" duration="140000" />
+      <workItem from="1633528906293" duration="7108000" />
+      <workItem from="1633538805422" duration="1016000" />
+      <workItem from="1633565439216" duration="20000" />
+      <workItem from="1633614987802" duration="6584000" />
+      <workItem from="1633871741458" duration="607000" />
+      <workItem from="1633925755086" duration="792000" />
+      <workItem from="1633944589782" duration="14000" />
+      <workItem from="1634214219831" duration="765000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

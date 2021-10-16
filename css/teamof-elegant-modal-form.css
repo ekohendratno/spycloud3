@@ -1,0 +1,164 @@
+.row2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
+
+.col-6,
+.col-12,
+.col-lg-6 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 0;
+    padding-left: 0
+}
+
+.col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%
+}
+
+.col-6 {
+    -webkit-box-flex: 0
+}
+
+.col-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+}
+@media (min-width:992px) {
+    .col-lg-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+}
+
+
+.of-elegant-modal .form-group .of-input-container {
+    position: relative;
+}
+.of-elegant-modal .form-group .of-input-container .of-input-icon {
+    width: 48px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    line-height: 300%;
+}
+.of-elegant-modal .form-group .of-input-container .of-input-icon img {
+    width: 18px;
+    height: 18px;	
+}
+.of-elegant-modal .form-group .of-input-container .of-input-icon img {
+    vertical-align: baseline;
+}
+
+.modal.of-elegant-modal .form-group .of-input-container .of-input-validation.show-password {
+    cursor: pointer;
+    background-image: url(../img/view.svg);
+}
+.modal.of-elegant-modal .form-group .of-input-container .of-input-validation {
+    width: 48px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    line-height: 300%;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.of-elegant-modal .form-control {
+    padding-left: 50px;
+    background-color: #f8f9fc;
+    border: 1px solid #f3f5f9;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    -o-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+.of-elegant-modal .of-intro-container {
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+	
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	
+    color: #fff;
+    text-align: center
+}
+
+.of-elegant-modal a:hover {
+    text-decoration: none
+}
+
+.of-elegant-modal input.form-control:focus {
+    border-color: #dfe1e5
+}
+
+.of-elegant-modal .of-show {
+    opacity: 1!important;
+    visibility: visible!important
+}
+
+.of-elegant-modal .of-login-container.of-show {
+    -webkit-transform: translateZ(0)!important;
+    transform: translateZ(0)!important
+}
+
+.of-elegant-modal .of-toggle-link {
+    display: block;
+    margin-top: 40px;
+    color: #323232;
+    text-align: center
+}
+
+.of-elegant-modal .of-toggle-link.of-signin-link {
+    margin-top: 30px
+}
+
+.of-elegant-modal .of-toggle-link:hover {
+    color: #000
+}
+
+.of-elegant-modal .of-login-container {
+    opacity: 0;
+    visibility: hidden;
+    padding-right: 35px;
+    padding-left: 35px;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    -webkit-transform: translate3d(-10%, 0, 0);
+    transform: translate3d(-10%, 0, 0)
+}

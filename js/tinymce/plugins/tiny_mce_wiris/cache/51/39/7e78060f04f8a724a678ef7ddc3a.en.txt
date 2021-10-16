@@ -1,0 +1,1 @@
+{"result":{"text":"straight P space equals space a to the power of italic 2 over italic 3 end exponent italic. b to the power of italic minus italic 3 over italic 4 end exponent"},"status":"ok"}
