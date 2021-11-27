@@ -174,6 +174,7 @@ class Files extends CI_Controller{
             $dd['path'] = $v['d'];
             $dd['size'] = $this->human_filesize($v['f']);
             $dd['status'] = $v['g'];
+            $dd['ext'] = $v['h'];
 
 
 
@@ -297,6 +298,8 @@ class Files extends CI_Controller{
                 $xa = explode("/" ,$fa);
                 $xc = explode("_" ,$xa[1]);
 
+                $ext = pathinfo($path, PATHINFO_EXTENSION);
+
                 $a = array();
                 $a['a'] = !empty($xc[0]) ? $xc[0] : "";
                 $a['b'] = !empty($xc[1]) ? $xc[1] : "";
@@ -305,6 +308,7 @@ class Files extends CI_Controller{
                 $a['e'] = filemtime($path);
                 $a['f'] = filesize($path);
                 $a['g'] = "";//$this->cekFile2($path);
+                $a['h'] = $ext;
 
 
                 //if(getimagesize($path) === false){

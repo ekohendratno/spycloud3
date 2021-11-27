@@ -24,7 +24,7 @@ date_default_timezone_set('Asia/Jakarta');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://192.168.10.249/spycloud3';
+$config['base_url'] = 'http://192.168.0.2/spycloud3';
 
 /*
 |--------------------------------------------------------------------------

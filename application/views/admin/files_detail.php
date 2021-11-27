@@ -44,11 +44,6 @@
                                             </div>
                                             <div class="col-md-3">
                                                 <select class="form-control"  id="limitBy" onchange="searchFilter()">
-                                                    <option value="50">50</option>
-                                                    <option value="100">100</option>
-                                                    <option value="150">150</option>
-                                                    <option value="200">200</option>
-                                                    <option value="300">300</option>
                                                     <option value="500">500</option>
                                                     <option value="1000">1000</option>
                                                     <option value="1500">1500</option>
@@ -121,10 +116,14 @@
 			var nomor = 1;
 			for(emp in data){
 
+			    var thumb = "thumb.php";
+			    if(data[emp].ext == "webp"){
+                    thumb = "thumb2.php";
+                }
 				var empRow = '<tr>'+
 							'<td class="text-center">'+nomor+'</td>'+
 							'<td><a href="#sample-box" data-toggle="modal" onclick="submit(\'<?php echo base_url();?>thumb.php?src=./uploads/'+data[emp].path+'&size=100x100\',\'<?php echo base_url();?>uploads/'+data[emp].path+'\')">'+
-							'<img src=\'<?php echo base_url();?>thumb.php?src=./uploads/'+data[emp].path+'&size=40x40\' /> '+data[emp].image+'</a><br/>'+data[emp].size+', '+data[emp].tanggal2+'</td>'+
+							'<img src=\'<?php echo base_url();?>'+thumb+'?src=./uploads/'+data[emp].path+'&size=40x40\' /> '+data[emp].image+'</a><br/>'+data[emp].size+', '+data[emp].tanggal2+'</td>'+
 							'<td class="text-center"><a href="<?php echo base_url();?>uploads/'+data[emp].path+'" target="_blank" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-file"></span></a> <a onclick="hapus(\''+data[emp].path+'\')" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-trash"></span></a></td>'+
 							+'</tr>';
 				nomor++;
