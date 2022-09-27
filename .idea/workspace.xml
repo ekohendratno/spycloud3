@@ -2,12 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4034bdf0-94cc-48d1-8e67-483e750054e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Apiv4.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Apiv4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Call.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Call.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Camera.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Camera.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Commander.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Commander.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/admin/Files.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Gps.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Gps.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Phone.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Phone.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Sms.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Sms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/files.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/files.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/files_detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/files_detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/055bc700356a384bdd1221638ff2bdd5.img.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/31cf613bde7b4344acde929c36c73363.img.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/727780dfd54b9c988763a32237689652.img.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/7e90e1d7446404adeac9eb5e28f69786.img.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/ca39e4cf26e54f33375196e583ec02fa.img.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thumb.php" beforeDir="false" afterPath="$PROJECT_DIR$/thumb.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +60,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kelulusan" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\www\spycloud3" />
       <recent name="C:\www\spycloud3\application\controllers" />
     </key>
   </component>
@@ -102,6 +117,17 @@
       <workItem from="1634991299389" duration="572000" />
       <workItem from="1635049859234" duration="15000" />
       <workItem from="1638010087993" duration="5002000" />
+      <workItem from="1638280087328" duration="1596000" />
+      <workItem from="1638282117509" duration="887000" />
+      <workItem from="1638349727614" duration="4291000" />
+      <workItem from="1638442692524" duration="777000" />
+      <workItem from="1638453872833" duration="230000" />
+      <workItem from="1638532944429" duration="674000" />
+      <workItem from="1638623347322" duration="6826000" />
+      <workItem from="1638672035249" duration="3680000" />
+      <workItem from="1646734380861" duration="1195000" />
+      <workItem from="1646755314175" duration="307000" />
+      <workItem from="1653977249874" duration="1823000" />
     </task>
     <servers />
   </component>
@@ -109,9 +135,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="517" y="284" key="NewPhpFileDialog" timestamp="1638011206964">
+    <state x="463" y="116" key="FileChooserDialogImpl" timestamp="1653987917583">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="517" y="284" key="NewPhpFileDialog/0.0.1366.720@0.0.1366.720" timestamp="1638011206964" />
+    <state x="463" y="116" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1653987917583" />
   </component>
 </project>

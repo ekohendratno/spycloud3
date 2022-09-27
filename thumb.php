@@ -13,7 +13,7 @@ define('THUMB_BROWSER_CACHE',   true);          // Browser cache true or false
 define('SHARPEN_MIN',           12);            // Minimum sharpen value
 define('SHARPEN_MAX',           28);            // Maximum sharpen value
 define('ADJUST_ORIENTATION',    true);          // Auto adjust orientation for JPEG true or false
-define('JPEG_QUALITY',          60);           // Quality of generated JPEGs (0 - 100; 100 being best)
+define('JPEG_QUALITY',          40);           // Quality of generated JPEGs (0 - 100; 100 being best)
 
 $src = isset($_GET['src']) ? $_GET['src'] : false;
 $size = isset($_GET['size']) ? str_replace(array('<', 'x'), '', $_GET['size']) != '' ? $_GET['size'] : 100 : 100;

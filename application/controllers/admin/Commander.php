@@ -10,7 +10,7 @@ class Commander extends CI_Controller{
 		$this->load->helpers('url');
 		
 		if($this->session->userdata('level') != 'admin'){
-			redirect('auth/profile');
+			redirect('auth');
 		}
         $this->user_id = $this->session->userdata('user_id');
 	}

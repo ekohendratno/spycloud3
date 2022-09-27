@@ -7,7 +7,7 @@ class Dashboard extends CI_Controller{
         $this->template->load('template','admin/dashboard',$data);
 		
 		if($this->session->userdata('level') != 'admin'){
-			redirect('auth/profile');
+			redirect('auth');
 		}
     }
 }

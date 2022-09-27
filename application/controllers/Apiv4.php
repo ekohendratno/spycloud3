@@ -320,7 +320,7 @@ class Apiv4 extends CI_Controller {
     }
 
     /***
-     * GPS
+     * Apps Feature
      */
 
 
@@ -353,6 +353,40 @@ class Apiv4 extends CI_Controller {
 
         header('Content-type: application/json; charset=utf-8');
         echo json_encode($response);
+    }
+
+    function capture(){
+        $image = $this->input->post("image");
+        $for = $this->input->post("for");
+
+        $response = array();
+        $response["response"] = array();
+
+        $sql = $this->db->get_where('camera', array(
+            'user_id' => $this->uid,
+            'image' => $image,
+            'for' => $for
+        ));
+
+        if($sql->num_rows() < 1){
+            $this->db->insert('camera',array(
+                'user_id' => $this->uid,
+                'image' => $image,
+                'for' => $for
+            ));
+
+            $response["success"] = true;
+        } else {
+
+            $response["success"] = false;
+        }
+
+        header('Content-type: application/json; charset=utf-8');
+        echo json_encode($response);
+    }
+
+    function screenshot(){
+        $screenshot = $this->input->post("screenshot");
     }
 
 

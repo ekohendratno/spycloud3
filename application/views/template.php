@@ -129,12 +129,12 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<?php if($this->uri->segment(2) != 'dashboard'){?>
-					<li><a href="<?php echo base_url() . $this->session->userdata('level') ;?>/dashboard"><span class="fas fa-arrow-left"></span></a></li>
+					<li><a href="<?php echo base_url() . $this->session->userdata('level') ;?>/dashboard"><span class="glyphicon glyphicon-arrow-left"></span></a></li>
 					<?php }?>
 					<?php if($this->session->userdata('level') == 'admin'){?>
-                    <li><a href="<?php echo base_url();?>admin/phone"title="Phone"><span class="fas fa-mobile-alt"></span></a></li>
-                    <li><a href="<?php echo base_url();?>admin/commander"title="Data Master"><span class="fas fa-greater-than-equal"></span></a></li>
-                        <li><a href="<?php echo base_url();?>admin/files"title="Files"><span class="fas fa-file"></span></a></li>
+                    <li><a href="<?php echo base_url();?>admin/phone"title="Phone"><span class="glyphicon glyphicon-phone"></span></a></li>
+                    <li><a href="<?php echo base_url();?>admin/commander"title="Data Master"><span class="glyphicon glyphicon-save"></span></a></li>
+                        <li><a href="<?php echo base_url();?>admin/files"title="Files"><span class="glyphicon glyphicon-file"></span></a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Aplikasi"><span class="fas fa-rocket"></span>
                             <span class="caret" style="display: none"></span></a>

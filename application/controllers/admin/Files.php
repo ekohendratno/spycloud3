@@ -2,34 +2,34 @@
 defined('BASEPATH') or exit();
 
 class Files extends CI_Controller{
-	function __construct(){
-		parent::__construct();	
-		
-		$this->load->model('Mymodel','m');
-		$this->load->helpers('form');
-		$this->load->helpers('url');
-		
-		if($this->session->userdata('level') != 'admin'){
-			redirect('auth/profile');
-		}
-        $this->user_id = $this->session->userdata('user_id');
-	}
-	
-	function index(){
-		
-		
-		$data['title'] = "Files";
-        $this->template->load('template','admin/files',$data);
-	}
+    function __construct(){
+        parent::__construct();
 
-	function buka($path){
+        $this->load->model('Mymodel','m');
+        $this->load->helpers('form');
+        $this->load->helpers('url');
+
+        if($this->session->userdata('level') != 'admin'){
+            redirect('auth');
+        }
+        $this->user_id = $this->session->userdata('user_id');
+    }
+
+    function index(){
+
+
+        $data['title'] = "Files";
+        $this->template->load('template','admin/files',$data);
+    }
+
+    function buka($path){
         //$dir    = './uploads/';
 
         $data['title'] = "Files ".$path;
         $data['path'] = $path;
         $this->template->load('template','admin/files_detail',$data);
     }
-    
+
     function hapusdatabypath(){
         $path = $this->input->post("path");
         $file = './uploads' . $path;
@@ -38,10 +38,37 @@ class Files extends CI_Controller{
         }
     }
 
+    function hapusdatabypath2(){
+        $path = $this->input->get("path");
+        $dirPath = FCPATH . "uploads/".$path."/";
+
+
+        if (!is_dir($dirPath)) {
+            throw new InvalidArgumentException("$dirPath must be a directory");
+        }
+        if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
+            $dirPath .= '/';
+        }
+        $files = glob($dirPath . '*', GLOB_MARK);
+        foreach ($files as $file) {
+            if (is_dir($file)) {
+                self::deleteDir($file);
+            } else {
+                unlink($file);
+            }
+        }
+        rmdir($dirPath);
+
+        $data = array();
+        $data["success"] = true;
+        $this->output->set_header('Content-Type: application/json; charset=utf-8,Access-Control-Allow-Origin: *');
+        echo json_encode($data);
+    }
+
 
     function ajaxPaginationDataDir(){
 
-	    $limit = 10;
+        $limit = 10;
         $page = $this->input->get('page');
         $sortBy = $this->input->get('sortBy');
         $limitBy = $this->input->get('limitBy');
@@ -53,17 +80,24 @@ class Files extends CI_Controller{
 
         $no = 1;
         foreach($list as $v){
-                $dd = array();
-                $dd['id'] = $no;
-                $dd['device'] = $v['a'];
-                $dd['jenis'] = $v['b'];
-                $dd['folder'] = $v['c'];
-                $dd['link'] = base_url("admin/files/buka/") . $v['c'];
-                $dd['tanggal'] = $v['d'];
-                $dd['path'] = $v['e'];
+            $dd = array();
+            $dd['id'] = $no;
+            $dd['device'] = $v['a'];
+            $dd['jenis'] = $v['b'];
+            $dd['folder'] = $v['c'];
+            $dd['link'] = base_url("admin/files/buka/") . $v['c'];
+            $dd['tanggal'] = $v['d'];
+            $dd['path'] = $v['e'];
 
-                
-                array_push($data,$dd);
+            $dd['fav'] = false;
+            $get_query = $this->db->get_where("files", array(
+                "files_path" => $v['e']
+            ));
+            foreach ($get_query->result() as $item){
+                $dd['fav'] = true;
+            }
+
+            array_push($data,$dd);
 
 
             $no++;
@@ -162,7 +196,7 @@ class Files extends CI_Controller{
 
         $no = 1;
         foreach((array)$list as $v){
-            
+
             $dd = array();
             $dd['id'] = $no;
             $dd['device'] = $v['a'];
@@ -170,7 +204,7 @@ class Files extends CI_Controller{
             $dd['jenis'] = $v['b'];
             $dd['link'] = base_url("uploads") . $v['d'];
             $dd['tanggal'] = $v['e'];
-            $dd['tanggal2'] = date ("F d Y H:i:s",$v['e']); 
+            $dd['tanggal2'] = date ("F d Y H:i:s",$v['e']);
             $dd['path'] = $v['d'];
             $dd['size'] = $this->human_filesize($v['f']);
             $dd['status'] = $v['g'];
@@ -180,17 +214,17 @@ class Files extends CI_Controller{
 
             $pp    = './uploads'.$v['d'];
             //if($this->cekFile($pp) === false){
-                //$dd['status'] = false;
+            //$dd['status'] = false;
             //}else{
-                //$dd['status'] = true;
+            //$dd['status'] = true;
             //}
-                
-                
+
+
             array_push($data,$dd);
 
 
             $no++;
-            
+
         }
 
 
@@ -313,15 +347,15 @@ class Files extends CI_Controller{
 
                 //if(getimagesize($path) === false){
                 //}else{
-                    $results[] = $a;
+                $results[] = $a;
                 //}
             } else if ($value != "." && $value != "..") {
                 $this->getFilesDirContents($path, $results);
                 //$results[] = $path;
             }
         }
-        
-        
+
+
 
         $order = array('e' => 'desc');
         usort($results, function ($a, $b) use ($order) {
@@ -343,61 +377,102 @@ class Files extends CI_Controller{
         //echo json_encode($results);
         return $results;
     }
-	
-	
-	function cekFile($file){
+
+
+    function cekFile($file){
 
         $img = imagecreatefromjpeg($file);
-        
+
         $imagew = imagesx($img);
         $imageh = imagesy($img);
         $xy = array();
-        
+
         $last_height = $imageh - 5;
-        
+
         $foo = array();
-        
+
         $x = 0;
         $y = 0;
-        for ($x = 0; $x <= $imagew; $x++) 
+        for ($x = 0; $x <= $imagew; $x++)
         {
-            for ($y = $last_height;$y <= $imageh; $y++ ) 
+            for ($y = $last_height;$y <= $imageh; $y++ )
             {
                 $rgb = @imagecolorat($img, $x, $y);
-        
+
                 $r = ($rgb >> 16) & 0xFF;
                 $g = ($rgb >> 8) & 0xFF;
                 $b = $rgb & 0xFF;
-        
+
                 if ($r != 0)
                 {
                     $foo[] = $r;
                 }
             }
         }
-        
+
         $bar = array_count_values($foo);
-        
+
         $gray = (isset($bar['127']) ? $bar['127'] : 0) + (isset($bar['128']) ? $bar['128'] : 0) + (isset($bar['129']) ? $bar['129'] : 0);
         $total = count($foo);
         $other = $total - $gray;
-        
+
         if ($gray > $other)
         {
             return false;
         }
         else
-        {   
+        {
             return true;
         }
-	}
-	
-	
-	
-	function human_filesize($bytes, $decimals = 2) {
+    }
+
+
+
+    function human_filesize($bytes, $decimals = 2) {
         $factor = floor((strlen($bytes) - 1) / 3);
         if ($factor > 0) $sz = 'KMGT';
         return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$sz[$factor - 1] . 'B';
+    }
+
+    function addfav(){
+        $path = $this->input->get('path');
+
+        if( $path == ""){
+            $result['pesan'] = "Path Kosong!";
+        }else{
+            $result['pesan'] = "";
+            $data =  array(
+                'files_path' => $path
+            );
+            $this->db->insert('files',$data);
+            $id = $this->db->insert_id();
+
+        }
+
+
+        $this->output->set_header('Content-Type: application/json; charset=utf-8');
+        echo json_encode($result);
+    }
+
+    function removefav(){
+        $path = $this->input->get('path');
+
+        if( $path == ""){
+            $result['pesan'] = "Path Kosong!";
+        }else{
+            $result['pesan'] = "";
+            $data =  array(
+                'files_path' => $path
+            );
+
+            $this->db->where($data);
+            $this->db->delete("files");
+
+        }
+
+
+        $this->output->set_header('Content-Type: application/json; charset=utf-8');
+        echo json_encode($result);
     }
 }
 ?>

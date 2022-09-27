@@ -8,8 +8,9 @@
                     <div class="panel-heading clearfix">
                         <h4 class="panel-title text-center" style="padding-top: 7.5px;">FILES</h4>
                         <div class="panel-title-button pull-right">
-                            <a href="#form2" data-toggle="modal" class="btn" title="Filter"><span class="fas fa-filter"></span></a>
-                            <a href="#" onclick="searchFilter(0)" class="btn"><span class="fas fa-redo-alt"></span></a>
+                            <a href="<?php echo base_url(); ?>index.php/Res8Bulk?path=<?php echo $path; ?>" class="btn" title="Bulk"><span class="glyphicon glyphicon-check"></span></a>
+                            <a href="#form2" data-toggle="modal" class="btn" title="Filter"><span class="glyphicon glyphicon-filter"></span></a>
+                            <a href="#" onclick="searchFilter(0)" class="btn"><span class="glyphicon glyphicon-refresh"></span></a>
                         </div>
                     </div>
 					<div class="panel-body">
@@ -120,10 +121,11 @@
 			    if(data[emp].ext == "webp"){
                     thumb = "thumb2.php";
                 }
+
 				var empRow = '<tr>'+
 							'<td class="text-center">'+nomor+'</td>'+
-							'<td><a href="#sample-box" data-toggle="modal" onclick="submit(\'<?php echo base_url();?>thumb.php?src=./uploads/'+data[emp].path+'&size=100x100\',\'<?php echo base_url();?>uploads/'+data[emp].path+'\')">'+
-							'<img src=\'<?php echo base_url();?>'+thumb+'?src=./uploads/'+data[emp].path+'&size=40x40\' /> '+data[emp].image+'</a><br/>'+data[emp].size+', '+data[emp].tanggal2+'</td>'+
+							'<td><a href="#sample-box" data-toggle="modal" onclick="submit(\'<?php echo base_url();?>uploads/'+data[emp].path+'\',\'<?php echo base_url();?>uploads/'+data[emp].path+'\')">'+
+							'<img width="40" src=\'<?php echo base_url();?>uploads/'+data[emp].path+'\' /> '+data[emp].image+'</a><br/>'+data[emp].size+', '+data[emp].tanggal2+'</td>'+
 							'<td class="text-center"><a href="<?php echo base_url();?>uploads/'+data[emp].path+'" target="_blank" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-file"></span></a> <a onclick="hapus(\''+data[emp].path+'\')" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-trash"></span></a></td>'+
 							+'</tr>';
 				nomor++;
